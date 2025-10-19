@@ -1,0 +1,37 @@
+
+body {
+  background-color: #f8f9fa; /* Світло-сірий фон для всієї сторінки */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Більш сучасний шрифт */
+}
+
+
+.header, .footer {
+  background-color: #343a40; /* Темний фон */
+  color: white;
+}
+
+.footer p {
+  margin: 0; 
+}
+
+
+.column-block {
+  background-color: #ffffff; 
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+  height: 100%; /
+}
+
+
+.carousel-item img {
+  height: 500px;
+  object-fit: cover; 
+  border-radius: 5px; 
+}
+
+
+.form-label {
+  font-weight: 500; 
+}

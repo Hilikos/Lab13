@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивна Bootstrap Сітка</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header p-3 mb-4">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Lab13</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Головна</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Про нас</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Послуги
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Веб-розробка</a></li>
+                                    <li><a class="dropdown-item" href="#">Мобільна розробка</a></li>
+                                    <li><a class="dropdown-item" href="#">Дизайн</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Контакти</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="row">
+
+            <div class="col-12 col-lg-6 order-lg-2">
+                <div class="column-block">
+                    <h2>Основний вміст (MAIN)</h2>
+                    <p>Тут розміщено основну інформацію за допомогою компонента "акордеон".</p>
+                    
+                    <div class="accordion" id="mainAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Розділ 1: Що таке Bootstrap?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#mainAccordion">
+                                <div class="accordion-body">
+                                    <strong>Bootstrap</strong> — це вільний набір інструментів для створення сайтів і веб-додатків. Він містить HTML- і CSS-шаблони оформлення для типографіки, веб-форм, кнопок та інших компонентів.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Розділ 2: Переваги адаптивного дизайну
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#mainAccordion">
+                                <div class="accordion-body">
+                                    Адаптивний веб-дизайн дозволяє сайту коректно відображатися на пристроях з різними розмірами екранів.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Розділ 3: Як працює сітка Bootstrap?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#mainAccordion">
+                                <div class="accordion-body">
+                                    Сітка Bootstrap поділяє екран на 12 рівних колонок, що дозволяє гнучко керувати розміщенням елементів.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3 order-lg-1">
+                <div class="column-block">
+                    <h4>Галерея (LEFT)</h4>
+                    
+                    <div id="imageSlider" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://placehold.co/300x500/3498db/ffffff?text=Зображення+1" class="d-block w-100" alt="Зображення 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://placehold.co/300x500/2ecc71/ffffff?text=Зображення+2" class="d-block w-100" alt="Зображення 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://placehold.co/300x500/e74c3c/ffffff?text=Зображення+3" class="d-block w-100" alt="Зображення 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://placehold.co/300x500/f39c12/ffffff?text=Зображення+4" class="d-block w-100" alt="Зображення 4">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#imageSlider" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Попередній</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#imageSlider" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Наступний</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3 order-lg-3">
+                <div class="column-block">
+                    <h4>Форма (RIGHT)</h4>
+                    
+                    <form>
+                        <div class="mb-3">
+                            <label for="inputName" class="form-label">Ваше ім'я</label>
+                            <input type="text" class="form-control" id="inputName" placeholder="Іван Петренко" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputEmail" class="form-label">Email адреса</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputSubject" class="form-label">Тема повідомлення</label>
+                            <input type="text" class="form-control" id="inputSubject">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputMessage" class="form-label">Ваше повідомлення</label>
+                            <textarea class="form-control" id="inputMessage" rows="4" required></textarea>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="agreeCheck" required>
+                            <label class="form-check-label" for="agreeCheck">Я погоджуюсь з обробкою даних</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Надіслати</button>
+                        <button type="reset" class="btn btn-secondary">Очистити</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer p-4 mt-4 text-center">
+        <div class="container">
+            <p>&copy; 2025 Мій Адаптивний Сайт. Всі права захищено.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
